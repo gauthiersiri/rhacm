@@ -1,0 +1,15 @@
+apiVersion: ramendr.openshift.io/v1alpha1
+kind: DRPlacementControl
+metadata:
+  labels:
+    app: letschat-rhacm
+  name: letschat-app-placement-control
+spec:
+  drPolicyRef:
+    name: odr-policy-5m  ## <-- Modify to specify desired DRPolicy and RPO
+  placementRef:
+    kind: PlacementRule
+    name: letschat-placement
+  pvcSelector:
+    matchLabels:
+      app: letschat-db

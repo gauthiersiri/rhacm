@@ -7,4 +7,4 @@ metadata:
 spec:
   accessModes:
     - ReadWriteOnce
-  storageClassName: ocs-storagecluster-ceph-rbd
+  storageClassName: ocs-storagecluster-ceph-rbdmirror
